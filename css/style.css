@@ -1,35 +1,82 @@
-/* reset */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* commons */
+/* COMMONS */
 #root {
+    font-family: 'Lato', sans-serif;
     height: 100vh;
     background: linear-gradient(to top, #dbdbd2 80%, #009688 20%);
     background-repeat:no-repeat; 
     padding: 20px 0;
+}
+.flex {
+    display: flex;
+}
+.no-shrink {
+    flex-shrink: 0;
 }
 .container {
     width: 70%;
     height: 100%;
     background-color: lightblue; /*debug*/
     margin: 0 auto;
-    display: flex;
 }
 
-/* col contact */
-.contact-container {
+/* COL CONTACT */
+.col-contact {
     width: 35%;
     height: 100%;
     background-color: lightyellow; /*debug*/
+    display: flex;
+    flex-direction: column;
+}
+/* box user */
+.col-contact .box-user {
+    width: 100%;
+    height: 65px;
+    background-color: #eaeaea;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.col-contact .box-user .col-nameUser-pic {
+    align-items: center;
+}
+.col-contact .box-user .col-nameUser-pic #mypic{
+    width: 45px;
+    border-radius: 50%;
+}
+.col-contact .box-user .col-user-options i {
+    margin: 0 5px;
+    color: #b1b1b1;
+    font-size: 1.2rem;
+}
+/* box notifications */
+.col-contact .box-notifications {
+    width: 100%;
+    height: 10%;
+    background-color: #8edafc; /*debug*/
+}
+/* box search */
+.col-contact .box-search {
+    width: 100%;
+    height: 6%;
+    background-color: lightpink; /*debug*/
+}
+/* box contact list */
+.col-contact .box-contact {
+    width: 100%;
+    height: calc(100% - 8% - 10% - 6%);
+    background-color: lightslategray; /*debug*/
 }
 
 
-/* col chat */
-.chat-container {
+/* COL CHAT */
+.col-chat {
     width: 65%;
     height: 100%;
     background-color: lightgreen; /*debug*/

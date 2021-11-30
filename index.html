@@ -5,18 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Boolzap</title>
 </head>
 <body>
     
     <div id="root">
-        <div class="container">
+        <div class="container flex">
             <!-- colonna contatti -->
-            <div class="contact-container"></div>
+            <div class="col-contact">
+                <!-- box user -->
+                <div class="box-user flex no-shrink">
+                    <!-- foto e nome utente -->
+                    <div class="col-nameUser-pic flex">
+                        <img src="img/avatar_io.jpg" alt="foto user" id="mypic">
+                        <h5>Nome Utente</h5>
+                    </div>
+                    <!-- /foto e nome utente -->
+
+                    <!-- icone opzioni utente -->
+                    <div class="col-user-options">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <!-- /icone opzioni utente -->
+                </div>
+                <!-- /box user -->
+
+                <!-- box attivazione nuove notifiche -->
+                <div class="box-notifications"></div>
+                <!-- box cerca -->
+                <div class="box-search"></div>
+                <!-- box lista contatti -->
+                <div class="box-contact"></div>
+            </div>
             <!-- /colonna contatti -->
 
+
             <!-- colonna chat -->
-            <div class="chat-container"></div>
+            <div class="col-chat"></div>
             <!-- /colonna chat -->
         </div>
     </div>
