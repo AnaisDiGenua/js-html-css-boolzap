@@ -80,8 +80,25 @@
 /* box search */
 .col-contact .box-search {
     width: 100%;
-    height: 6%;
-    background-color: lightpink; /*debug*/
+    height: 40px;
+    background-color: #eaeaea;
+    padding: 4px;
+}
+.col-contact .box-search input {
+    width: 80%;
+    height: 100%;
+    font-size: 12px;
+    border: 1px solid #f5f5f5
+}
+.col-contact .box-search .search-icon {
+    width: 20%;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    background-color: white;
+}
+.col-contact .box-search .search-icon i {
+    color: #b1b1b1;
 }
 /* box contact list */
 .col-contact .box-contact {
