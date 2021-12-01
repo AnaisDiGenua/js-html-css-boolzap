@@ -65,8 +65,17 @@
                     <!-- lista contatti -->
                     <ul>
                         <!-- contatto inserito dinamicamente con vue -->
-                        <li class="flex" v-for="contact in contacts">
-                            <img :src="`img/avatar${contact.avatar}.jpg`" :alt="`foto ${contact.name}`" class="avatar-img">
+                        <li 
+                        class="flex" 
+                        v-for="(contact,index) in contacts" 
+                        @click="selectedChat(index)"
+                        :class="activeContact == index ? 'active-contact' : '' "
+                        >
+                            <img 
+                            :src="`img/avatar${contact.avatar}.jpg`" 
+                            :alt="`foto ${contact.name}`" 
+                            class="avatar-img"
+                            >
                             <h5>{{contact.name}}</h5>
                         </li>
                         <!-- /contatto inserito dinamicamente con vue -->
@@ -107,19 +116,16 @@
                 <!-- sezione main -->
                 <div class="box-main">
                     <div class="chat-container">
-                        <div class="message sent">
-                            <div class="text">hai portato a spasso il cane?</div>
-                            <div class="delivery-date">10/12</div>
+                        <!-- messaggi inseriti dinamicamente con vue -->
+                        <div 
+                        class="message"  
+                        v-for="(mex, index) in contacts[activeContact].messages" 
+                        :class="mex.status == 'sent' ? 'sent' : 'received' "
+                        >
+                            <div class="text">{{mex.message}}</div>
+                            <div class="delivery-date">{{mex.date}}</div>
                         </div>
-                        <div class="message sent">
-                            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo earum ab a enim, quibusdam magni provident vitae nisi nihil aliquam necessitatibus et esse officia libero nemo? Et, aliquid soluta!</div>
-                            <div class="delivery-date">10/12</div>
-                        </div>
-                        <div class="message received">
-                            <div class="text">ciao</div>
-                            <div class="delivery-date">10/12</div>
-                        </div>
-                        
+                        <!-- /messaggi inseriti dinamicamente con vue -->
                     </div>
                 </div>
                 <!-- /sezione main -->
