@@ -64,15 +64,12 @@
                 <div class="box-contact">
                     <!-- lista contatti -->
                     <ul>
-                        <li class="flex">
-                            <img src="img/avatar_1.jpg" alt="avatar 1" class="avatar-img">
-                            <h5>Michele</h5>
+                        <!-- contatto inserito dinamicamente con vue -->
+                        <li class="flex" v-for="contact in contacts">
+                            <img :src="`img/avatar${contact.avatar}.jpg`" :alt="`foto ${contact.name}`" class="avatar-img">
+                            <h5>{{contact.name}}</h5>
                         </li>
-                        <li class="flex">
-                            <img src="img/avatar_1.jpg" alt="avatar 1" class="avatar-img">
-                            <h5>Michele</h5>
-                        </li>
-
+                        <!-- /contatto inserito dinamicamente con vue -->
                     </ul>
                     <!-- /lista contatti -->
                 </div>
