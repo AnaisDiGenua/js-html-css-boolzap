@@ -139,7 +139,7 @@
                     type="text" 
                     placeholder="  Scrivi un messaggio" 
                     v-model="mexValue" 
-                    @keyup.enter="addMessage()"
+                    @keyup.enter="addMessage(); replyMessage()"
                     >
                     <div class="audio-icon">
                         <i class="fas fa-microphone"></i>

@@ -88,7 +88,8 @@ const app = new Vue({
             },
         ],
         activeContact: 0,
-        mexValue: ''
+        mexValue: '',
+        messageId: null
     },
     methods: {
         selectedChat: function(index) {
@@ -99,10 +100,23 @@ const app = new Vue({
             if(this.mexValue != '') {
                 this.contacts[this.activeContact].messages.push(
                     {   message:this.mexValue,
-                        status: 'sent'
+                        status: 'sent',
+                        date: '10/01/2020 15:30:55'
                     });
                 this.mexValue = '';
             }
+        },
+        iaMessage: function() {
+            this.contacts[this.activeContact].messages.push(
+                {   message:'okay',
+                    status: 'received',
+                    date: '10/01/2020 15:30:55'
+                });
+        },
+        replyMessage: function () {
+            this.messageId = setTimeout(() => {
+				this.iaMessage();
+			}, 3000);
         }
     }
 });
