@@ -14,7 +14,7 @@
     padding: 20px 0;
 }
 .container {
-    width: 70%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
 }
@@ -49,7 +49,7 @@ i {
 
 /* COL CONTACT */
 .col-contact {
-    width: 35%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -145,7 +145,7 @@ i {
 
 /* COL CHAT */
 .col-chat {
-    width: 65%;
+    width: 70%;
     height: 100%;
     background-color: white;
     display: flex;
@@ -170,19 +170,18 @@ i {
 .col-chat .box-main {
     width: 100%;
     flex-grow: 1;
+    background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 }
 .col-chat .box-main .chat-container {
-    height: 100%;
     width: 100%;
-    background-image: url(../img/mine.jpg);
     display: flex;
     flex-direction: column;
     padding: 40px 60px;
 }
 .col-chat .box-main .message {
-    max-width: 45%;
-    width: 45%;
+    max-width: 40%;
+    width: 40%;
     margin-bottom: 8px;
     padding: 10px 10px 5px;
     border-radius: 0.5rem;

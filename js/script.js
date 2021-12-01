@@ -86,6 +86,76 @@ const app = new Vue({
                     }
                 ],
             },
+            {
+                name: 'Matteo',
+                avatar: '_5',
+                visible: true,
+                messages: [{
+                        date: '10/01/2020 15:30:55',
+                        message: 'Domani sushi?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Ci sta!',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Anastasia',
+                avatar: '_6',
+                visible: true,
+                messages: [{
+                        date: '10/01/2020 15:30:55',
+                        message: 'Stasera mangi a casa?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Yes, arrivo per le 8',
+                        status: 'received'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'A dopo allora',
+                        status: 'sent'
+                    }
+                ],
+            },
+            {
+                name: 'Davide',
+                avatar: '_7',
+                visible: true,
+                messages: [{
+                        date: '10/01/2020 15:30:55',
+                        message: 'Riesci a prendere qualcosa per stasera?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Si, dopo passo dal supermercato',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Ale',
+                avatar: '_8',
+                visible: true,
+                messages: [{
+                        date: '10/01/2020 15:30:55',
+                        message: 'Stasera film?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Vai',
+                        status: 'received'
+                    }
+                ],
+            }
+            
         ],
         activeContact: 0,
         mexValue: '',
