@@ -10,29 +10,44 @@
     font-family: 'Lato', sans-serif;
     height: 100vh;
     background: linear-gradient(to top, #dbdbd2 80%, #009688 20%);
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
     padding: 20px 0;
 }
+
 .container {
     width: 70%;
     height: 100%;
     margin: 0 auto;
 }
+
 .flex {
     display: flex;
     align-items: center;
 }
+
 .no-shrink {
     flex-shrink: 0;
 }
+
 .avatar-img {
     width: 48px;
     border-radius: 50%;
 }
+
 .user-icons i {
     margin: 0 7px;
     color: #b1b1b1;
     font-size: 1.2rem;
+}
+
+.sent {
+    margin-left: auto;
+    background-color: #d5f9ba;
+}
+
+.received {
+    margin-right: auto;
+    background-color: white;
 }
 
 /* COL CONTACT */
@@ -42,6 +57,7 @@
     display: flex;
     flex-direction: column;
 }
+
 /* box user */
 .col-contact .box-user {
     width: 100%;
@@ -51,16 +67,19 @@
     padding: 0 10px;
     border-right: 1px solid lightgray;
 }
-.col-contact .box-user .col-nameUser-pic #mypic{
+
+.col-contact .box-user .col-nameUser-pic #mypic {
     width: 45px;
     border-radius: 50%;
 }
+
 /* box notifications */
 .col-contact .box-notifications {
     width: 100%;
     height: 70px;
-    background-color: #8edafc; 
+    background-color: #8edafc;
 }
+
 .col-contact .box-notifications .off-sound {
     width: 45px;
     height: 45px;
@@ -69,17 +88,20 @@
     border-radius: 50%;
     margin: 0 10px;
 }
+
 .col-contact .box-notifications .off-sound i {
     font-size: 20px;
     color: #8edafc;
     padding: 10px;
 }
+
 .col-contact .box-notifications .enable-notifications p {
     font-size: 12px;
     text-decoration: underline;
     color: gray;
     margin-top: 2px;
 }
+
 /* box search */
 .col-contact .box-search {
     width: 100%;
@@ -87,6 +109,7 @@
     background-color: #eaeaea;
     padding: 4px;
 }
+
 .col-contact .box-search input {
     width: 80%;
     height: 100%;
@@ -94,6 +117,7 @@
     border: 1px solid #f5f5f5;
     border-radius: 2px;
 }
+
 .col-contact .box-search .search-icon {
     width: 20%;
     height: 100%;
@@ -101,9 +125,11 @@
     text-align: center;
     background-color: white;
 }
+
 .col-contact .box-search .search-icon i {
     color: #b1b1b1;
 }
+
 /* box contact list */
 .col-contact .box-contact {
     width: 100%;
@@ -111,14 +137,18 @@
     background-color: white;
     overflow-y: scroll;
 }
+
 .col-contact .box-contact ul {
     list-style: none;
 }
+
 .col-contact .box-contact ul li {
     padding: 8px 20px;
-    background-color: lightgray; /*debug*/
+    background-color: lightgray;
+    /*debug*/
     border-bottom: 1px solid #f5f5f5;
 }
+
 .col-contact .box-contact h5 {
     align-self: flex-start;
     margin-left: 10px;
@@ -129,8 +159,9 @@
 .col-chat {
     width: 65%;
     height: 100%;
-    background-color: lightgreen; /*debug*/
+    background-color: white;
 }
+
 /* header section */
 .col-chat .box-header {
     width: 100%;
@@ -139,20 +170,50 @@
     justify-content: space-between;
     padding: 0 10px;
 }
+
 .col-chat .box-header .current-name-user {
     margin-left: 10px;
 }
+
 .col-chat .box-header .last-access {
     font-size: 10px;
     color: gray;
 }
+
 /* main section */
 .col-chat .box-main {
     width: 100%;
     height: calc(100% - 65px - 65px);
-    background-color: lightseagreen; /*debug*/
     overflow-y: scroll;
 }
+
+.col-chat .box-main .chat-container {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/mine.jpg);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+}
+
+.col-chat .box-main .message {
+    max-width: 40%;
+    width: 40%;
+    margin-bottom: 8px;
+    padding: 10px 10px 5px;
+    border-radius: 0.5rem;
+}
+
+.col-chat .box-main .message .text {
+    /* max-width: 90%; */
+    font-size: 14px;
+}
+.col-chat .box-main .message .delivery-date {
+    font-size: 8px;
+    color: gray;
+    text-align: right;
+}
+
 /* footer section */
 .col-chat .box-footer {
     width: 100%;
@@ -167,7 +228,8 @@
     border-radius: 2px;
     border: none;
 }
-.col-chat .smile-icon, .col-chat .audio-icon {
+.col-chat .smile-icon,
+.col-chat .audio-icon {
     width: 10%;
     height: 100%;
     line-height: 45px;
