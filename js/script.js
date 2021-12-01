@@ -116,7 +116,7 @@ const app = new Vue({
         replyMessage: function () {
             this.messageId = setTimeout(() => {
 				this.iaMessage();
-			}, 3000);
+			}, 1000);
         }
     }
 });
