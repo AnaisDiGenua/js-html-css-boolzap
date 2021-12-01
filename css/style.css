@@ -195,6 +195,7 @@ i {
     font-size: 8px;
     color: gray;
     text-align: right;
+    padding-top: 2px;
 }
 /* footer section */
 .col-chat .box-footer {
@@ -208,6 +209,7 @@ i {
     font-size: 12px;
     height: 100%;
     border-radius: 2px;
+    padding: 0 10px;
     border: none;
 }
 .col-chat .smile-icon,

@@ -135,7 +135,12 @@
                     <div class="smile-icon">
                         <i class="far fa-smile"></i>
                     </div>
-                    <input type="text" placeholder="  Scrivi un messaggio">
+                    <input 
+                    type="text" 
+                    placeholder="  Scrivi un messaggio" 
+                    v-model="mexValue" 
+                    @keyup.enter="addMessage()"
+                    >
                     <div class="audio-icon">
                         <i class="fas fa-microphone"></i>
                     </div>
