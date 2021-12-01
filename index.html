@@ -57,7 +57,7 @@
                     <div class="search-icon">
                         <i class="fas fa-search"></i>
                     </div>
-                    <input type="text" placeholder="  Cerca o inizia una nuova chat">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
                 </div>
 
                 <!-- box lista contatti -->
@@ -67,7 +67,7 @@
                         <!-- contatto inserito dinamicamente con vue -->
                         <li 
                         class="flex" 
-                        v-for="(contact,index) in contacts" 
+                        v-for="(contact,index) in filteredContacts" 
                         @click="selectedChat(index)"
                         :class="activeContact == index ? 'active-contact' : '' "
                         >
@@ -137,7 +137,7 @@
                     </div>
                     <input 
                     type="text" 
-                    placeholder="  Scrivi un messaggio" 
+                    placeholder="Scrivi un messaggio" 
                     v-model="mexValue" 
                     @keyup.enter="addMessage(); replyMessage()"
                     >
