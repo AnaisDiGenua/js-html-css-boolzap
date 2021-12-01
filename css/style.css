@@ -28,6 +28,7 @@
 .avatar-img {
     width: 48px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .user-icons i {
     margin: 0 7px;
@@ -41,6 +42,9 @@
 .received {
     margin-right: auto;
     background-color: white;
+}
+i {
+    cursor: pointer;
 }
 
 /* COL CONTACT */
@@ -62,6 +66,7 @@
 .col-contact .box-user .col-nameUser-pic #mypic {
     width: 45px;
     border-radius: 50%;
+    cursor: pointer;
 }
 /* box notifications */
 .col-contact .box-notifications {
@@ -124,6 +129,7 @@
 }
 .col-contact .box-contact ul li {
     padding: 8px 20px;
+    cursor: pointer;
 }
 .col-contact .box-contact ul li:not(:last-child) {
     border-bottom: 1px solid #f5f5f5;
@@ -142,6 +148,8 @@
     width: 65%;
     height: 100%;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 /* header section */
 .col-chat .box-header {
@@ -161,7 +169,7 @@
 /* main section */
 .col-chat .box-main {
     width: 100%;
-    height: calc(100% - 65px - 65px);
+    flex-grow: 1;
     overflow-y: scroll;
 }
 .col-chat .box-main .chat-container {

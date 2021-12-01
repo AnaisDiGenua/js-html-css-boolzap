@@ -92,7 +92,6 @@ const app = new Vue({
     methods: {
         selectedChat: function(index) {
             this.activeContact = index;
-            console.log(this.activeContact);
         }
     }
 });
