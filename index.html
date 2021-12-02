@@ -93,10 +93,10 @@
                     <!-- foto e nome utente chat corrente -->
                     <div class="col-nameUser-pic flex">
                         <div class="current-chat-img">
-                            <img src="img/avatar_1.jpg" alt="foto chat corrente" class="avatar-img">
+                            <img :src="`img/avatar${contacts[activeContact].avatar}.jpg`" alt="foto chat corrente" class="avatar-img">
                         </div>
                         <div class="current-name-user">
-                            <h5>Michele</h5>
+                            <h5>{{contacts[activeContact].name}}</h5>
                             <p class="last-access">Ultimo accesso alle</p>
                         </div>
 
@@ -120,7 +120,7 @@
                         <div 
                         class="message"  
                         v-for="(mex, index) in contacts[activeContact].messages" 
-                        :class="mex.status == 'sent' ? 'sent' : 'received' "
+                        :class="mex.status"
                         >
                             <div class="text">{{mex.message}}</div>
                             <div class="delivery-date">{{mex.date}}</div>
