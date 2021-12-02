@@ -159,7 +159,9 @@ const app = new Vue({
         activeContact: 0,
         mexValue: '',
         messageId: null,
-        search: ''
+        search: '',
+        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+        lastAccess: dayjs().format('HH:mm')
     },
     methods: {
         selectedChat: function(index) {
@@ -171,7 +173,7 @@ const app = new Vue({
                 this.contacts[this.activeContact].messages.push(
                     {   message:this.mexValue,
                         status: 'sent',
-                        date: '10/01/2020 15:30:55'
+                        date: this.date
                     });
                 this.mexValue = '';
             }
@@ -180,7 +182,7 @@ const app = new Vue({
             this.contacts[this.activeContact].messages.push(
                 {   message:'okay',
                     status: 'received',
-                    date: '10/01/2020 15:30:55'
+                    date: this.date
                 });
         },
         replyMessage: function () {
