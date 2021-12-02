@@ -67,9 +67,10 @@
                         <!-- contatto inserito dinamicamente con vue -->
                         <li 
                         class="flex" 
-                        v-for="(contact,index) in filteredContacts" 
+                        v-for="(contact,index) in contacts" 
                         @click="selectedChat(index)"
                         :class="activeContact == index ? 'active-contact' : '' "
+                        v-if="searchContacts(index)"
                         >
                             <img 
                             :src="`img/avatar${contact.avatar}.jpg`" 

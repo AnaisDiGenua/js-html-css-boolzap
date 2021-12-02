@@ -187,14 +187,13 @@ const app = new Vue({
             this.messageId = setTimeout(() => {
 				this.iaMessage();
 			}, 1000);
-        }
-    },
-    // soluzione trovata 
-    computed: {
-        filteredContacts: function(){
-            return this.contacts.filter((contact) => {
-                return contact.name.toLowerCase().match(this.search.toLowerCase())
-            });
-        }
+        },
+        searchContacts : function(index){
+            if (this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())) {
+                return true;
+            } else {
+                return false;
+            }
+        },
     }
 });
