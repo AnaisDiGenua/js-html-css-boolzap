@@ -160,7 +160,7 @@ const app = new Vue({
         mexValue: '',
         messageId: null,
         search: '',
-        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+        date: null,
         lastAccess: dayjs().format('HH:mm')
     },
     methods: {
@@ -168,6 +168,7 @@ const app = new Vue({
             this.activeContact = index;
         },
         addMessage: function() {
+            this.date = dayjs().format('DD/MM/YYYY HH:mm:ss');
             console.log(this.mexValue);
             if(this.mexValue != '') {
                 this.contacts[this.activeContact].messages.push(
@@ -179,6 +180,7 @@ const app = new Vue({
             }
         },
         iaMessage: function() {
+            this.date = dayjs().format('DD/MM/YYYY HH:mm:ss');
             this.contacts[this.activeContact].messages.push(
                 {   message:'okay',
                     status: 'received',
@@ -191,11 +193,7 @@ const app = new Vue({
 			}, 1000);
         },
         searchContacts : function(index){
-            if (this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())) {
-                return true;
-            } else {
-                return false;
-            }
+            return this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())
         },
     }
 });
