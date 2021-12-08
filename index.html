@@ -75,7 +75,11 @@
                             :alt="`foto ${contact.name}`" 
                             class="avatar-img"
                             >
-                            <h5>{{contact.name}}</h5>
+                            <div class="name-contact">
+                                <h5>{{contact.name}}</h5>
+                                <div class="last-message">{{lastMsg(index)}}</div>
+                            </div>
+                            <div class="last-date">{{lastDate(index)}}</div>
                         </li>
                         <!-- /contatto inserito dinamicamente con vue -->
                     </ul>

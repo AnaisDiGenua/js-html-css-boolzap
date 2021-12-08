@@ -161,7 +161,7 @@ const app = new Vue({
         messageId: null,
         search: '',
         date: null,
-        lastAccess: dayjs().format('HH:mm')
+        lastAccess: dayjs().format('HH:mm'),
     },
     methods: {
         selectedChat: function(index) {
@@ -195,5 +195,11 @@ const app = new Vue({
         searchContacts : function(index){
             return this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())
         },
-    }
+        lastMsg: function(index) {
+            return this.contacts[index].messages.slice(-1)[0].message;
+        },
+        lastDate: function(index) {
+            return this.contacts[index].messages.slice(-1)[0].date;
+        }
+    },
 });

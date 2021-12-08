@@ -132,17 +132,42 @@ i {
 .box-contact ul li {
     padding: 8px 20px;
     cursor: pointer;
+    position: relative;
 }
 .box-contact ul li:not(:last-child) {
     border-bottom: 1px solid #f5f5f5;
 }
-.box-contact h5 {
+.box-contact .name-contact {
     align-self: flex-start;
     margin-left: 10px;
+}
+.box-contact h5 {
+    font-size: 15px;
+}
+.box-contact .last-message {
+    font-size: 12px;
+    margin-top: 8px;
+    color: gray;
+}
+.last-message::before {
+    content: '\f560';
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+    font-weight: 900;
+    color: #2aa6d6;
+    padding-right: 5px;
+}
+.last-date {
+    font-size: 12px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 15px;
 }
 .active-contact {
     background-color: #e9ebeb;
 }
+
 
 
 /* COL CHAT */
