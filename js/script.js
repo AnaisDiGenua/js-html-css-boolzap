@@ -199,7 +199,9 @@ const app = new Vue({
             return this.contacts[index].messages.slice(-1)[0].message;
         },
         lastDate: function(index) {
-            return this.contacts[index].messages.slice(-1)[0].date;
+            let date = this.contacts[index].messages.slice(-1)[0].date;
+            date =  date.split(' ')[0];
+            return date;    
         }
     },
 });
