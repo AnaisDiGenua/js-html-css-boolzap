@@ -79,6 +79,7 @@
                                 <h5>{{contact.name}}</h5>
                                 <div class="last-message">{{lastMsg(index)}}</div>
                             </div>
+
                             <div class="last-date">{{lastDate(index)}}</div>
                         </li>
                         <!-- /contatto inserito dinamicamente con vue -->
@@ -121,12 +122,23 @@
                     <div class="chat-container">
                         <!-- messaggi inseriti dinamicamente con vue -->
                         <div 
-                        class="message"  
+                        class="message dropdown"  
                         v-for="(mex, index) in contacts[activeContact].messages" 
                         :class="mex.status"
+                        @click="toggleDropdown(index)"
                         >
                             <div class="text">{{mex.message}}</div>
                             <div class="delivery-date check">{{mex.date}}</div>
+
+                            <!-- dropdown -->
+                            <div v-show="contacts[index].visible == false" class="dropdown-content">
+                                <ul>
+                                    <li>Info messaggio</li>
+                                    <li @click="deleteMsg(index)">Elimina messaggio</li>
+                                </ul>
+                            </div>
+                            <!-- /dropdown -->
+                            
                         </div>
                         <!-- /messaggi inseriti dinamicamente con vue -->
                     </div>

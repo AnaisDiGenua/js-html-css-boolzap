@@ -70,7 +70,7 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Luisa',
+                name: 'Alex',
                 avatar: '_4',
                 visible: true,
                 messages: [{
@@ -162,6 +162,7 @@ const app = new Vue({
         search: '',
         date: null,
         lastAccess: dayjs().format('HH:mm'),
+        showDropdown: null
     },
     methods: {
         selectedChat: function(index) {
@@ -202,6 +203,16 @@ const app = new Vue({
             let date = this.contacts[index].messages.slice(-1)[0].date;
             date =  date.split(' ')[0];
             return date;    
+        },
+        toggleDropdown: function(index) {
+            if(this.contacts[index].visible == true) {
+                this.contacts[index].visible = false;
+            } else {
+                this.contacts[index].visible = true;
+            }
+        },
+        deleteMsg: function(index) {
+            this.contacts[this.activeContact].messages.splice(index,1);
         }
     },
 });
