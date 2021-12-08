@@ -55,7 +55,7 @@ i {
     flex-direction: column;
 }
 /* box user */
-.col-contact .box-user {
+.box-user {
     width: 100%;
     height: 65px;
     background-color: #eaeaea;
@@ -63,18 +63,18 @@ i {
     padding: 0 10px;
     border-right: 1px solid lightgray;
 }
-.col-contact .box-user .col-nameUser-pic #mypic {
+#mypic {
     width: 45px;
     border-radius: 50%;
     cursor: pointer;
 }
 /* box notifications */
-.col-contact .box-notifications {
+.box-notifications {
     width: 100%;
     height: 70px;
     background-color: #8edafc;
 }
-.col-contact .box-notifications .off-sound {
+.box-notifications .off-sound {
     width: 45px;
     height: 45px;
     line-height: 45px;
@@ -82,25 +82,25 @@ i {
     border-radius: 50%;
     margin: 0 10px;
 }
-.col-contact .box-notifications .off-sound i {
+.off-sound i {
     font-size: 20px;
     color: #8edafc;
     padding: 10px;
 }
-.col-contact .box-notifications .enable-notifications p {
+.enable-notifications p {
     font-size: 12px;
     text-decoration: underline;
     color: gray;
     margin-top: 2px;
 }
 /* box search */
-.col-contact .box-search {
+.box-search {
     width: 100%;
     height: 40px;
     background-color: #eaeaea;
     padding: 4px;
 }
-.col-contact .box-search input {
+.box-search input {
     width: 80%;
     height: 100%;
     font-size: 12px;
@@ -109,39 +109,39 @@ i {
     padding: 0 15px;
 
 }
-.col-contact .box-search .search-icon {
+.search-icon {
     width: 20%;
     height: 100%;
     line-height: 30px;
     text-align: center;
     background-color: white;
 }
-.col-contact .box-search .search-icon i {
+.search-icon i {
     color: #b1b1b1;
 }
 /* box contact list */
-.col-contact .box-contact {
+.box-contact {
     width: 100%;
     height: calc(100% - 65px - 70px - 40px);
     background-color: white;
     overflow-y: scroll;
 }
-.col-contact .box-contact ul {
+.box-contact ul {
     list-style: none;
 }
-.col-contact .box-contact ul li {
+.box-contact ul li {
     padding: 8px 20px;
     cursor: pointer;
 }
-.col-contact .box-contact ul li:not(:last-child) {
+.box-contact ul li:not(:last-child) {
     border-bottom: 1px solid #f5f5f5;
+}
+.box-contact h5 {
+    align-self: flex-start;
+    margin-left: 10px;
 }
 .active-contact {
     background-color: #e9ebeb;
-}
-.col-contact .box-contact h5 {
-    align-self: flex-start;
-    margin-left: 10px;
 }
 
 
@@ -154,58 +154,66 @@ i {
     flex-direction: column;
 }
 /* header section */
-.col-chat .box-header {
+.box-header {
     width: 100%;
     height: 65px;
     background-color: #eaeaea;
     justify-content: space-between;
     padding: 0 10px;
 }
-.col-chat .box-header .current-name-user {
+.box-header .current-name-user {
     margin-left: 10px;
 }
-.col-chat .box-header .last-access {
+.box-header .last-access {
     font-size: 10px;
     color: gray;
 }
 /* main section */
-.col-chat .box-main {
+.box-main {
     width: 100%;
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 }
-.col-chat .box-main .chat-container {
+.box-main .chat-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 40px 60px;
 }
-.col-chat .box-main .message {
+.box-main .message {
     max-width: 40%;
     width: 40%;
     margin-bottom: 8px;
     padding: 10px 10px 5px;
     border-radius: 0.5rem;
 }
-.col-chat .box-main .message .text {
+.message .text {
     /* max-width: 90%; */
     font-size: 14px;
 }
-.col-chat .box-main .message .delivery-date {
+.message .delivery-date {
     font-size: 8px;
     color: gray;
     text-align: right;
     padding-top: 2px;
 }
+.check::after {
+    content: '\f560';
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+    font-weight: 900;
+    color: #2aa6d6;
+    padding-left: 5px;
+}
 /* footer section */
-.col-chat .box-footer {
+.box-footer {
     width: 100%;
     height: 65px;
     background-color: #f3eeea;
     padding: 10px 0;
 }
-.col-chat .box-footer input {
+.box-footer input {
     flex-grow: 1;
     font-size: 12px;
     height: 100%;
