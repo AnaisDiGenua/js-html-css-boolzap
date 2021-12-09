@@ -196,8 +196,16 @@ const app = new Vue({
 				this.iaMessage();
 			}, 1000);
         },
-        searchContacts : function(index){
-            return this.contacts[index].name.toLowerCase().includes(this.search.toLowerCase())
+        searchContacts : function(){
+            this.contacts.forEach(element => {
+				// if( element.name.toLowerCase().includes(this.inputSearch.toLowerCase()) ) {
+				// 	element.visible = true;
+				// } else {
+				// 	element.visible = false;
+				// }
+
+				element.visible = element.name.toLowerCase().includes(this.search.toLowerCase()); // true o false
+			});
         },
         lastMsg: function(index) {
             return this.contacts[index].messages.slice(-1)[0].message;
