@@ -131,7 +131,8 @@
                             <div class="delivery-date check">{{mex.date}}</div>
 
                             <!-- dropdown -->
-                            <div v-show="contacts[index].visible == false" class="dropdown-content">
+                            <div 
+                            v-show="showDropdown.visible == true && showDropdown.indexMsg == index" class="dropdown-content">
                                 <ul>
                                     <li>Info messaggio</li>
                                     <li @click="deleteMsg(index)">Elimina messaggio</li>

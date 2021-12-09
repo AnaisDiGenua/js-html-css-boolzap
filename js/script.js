@@ -162,7 +162,10 @@ const app = new Vue({
         search: '',
         date: null,
         lastAccess: dayjs().format('HH:mm'),
-        showDropdown: null
+        showDropdown: {
+            visible: false,
+            indexMex: null
+        }
     },
     methods: {
         selectedChat: function(index) {
@@ -204,12 +207,9 @@ const app = new Vue({
             date =  date.split(' ')[0];
             return date;    
         },
-        toggleDropdown: function(index) {
-            if(this.contacts[index].visible == true) {
-                this.contacts[index].visible = false;
-            } else {
-                this.contacts[index].visible = true;
-            }
+        toggleDropdown: function(i) {
+            this.showDropdown.indexMsg = i;
+            this.showDropdown.visible = !this.showDropdown.visible;
         },
         deleteMsg: function(index) {
             this.contacts[this.activeContact].messages.splice(index,1);
